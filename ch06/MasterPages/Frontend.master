@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frontend.master.cs" Inherits="MasterPages_Frontend" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title></title>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+  <script src="/Scripts/modernizr-2.7.1.js"></script>
+</head>
+<body>
+  <form id="form1" runat="server">
+    <div id="PageWrapper">
+      <header><a href="/"></a></header>
+      <nav>Menu Goes Here</nav>
+      <section id="MainContent">
+        <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+        </asp:ContentPlaceHolder>
+      </section>
+      <aside id="Sidebar">
+        Select a theme
+        <br />
+        <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+          <asp:ListItem>Monochrome</asp:ListItem>
+          <asp:ListItem>DarkGrey</asp:ListItem>
+        </asp:DropDownList>
+      </aside>
+      <footer>Footer Goes Here</footer>
+    </div>
+  </form>
+</body>
+</html>
